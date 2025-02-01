@@ -15,10 +15,31 @@ const rentalData = [];
 
 function App() {
 
+  const pathValue = window.location.pathname.slice(1) || "home";
+
+
+  let page;
+
+  switch(pathValue) {
+    case 'home':
+      page = <Home />;
+      break;
+    case 'users':
+      page = <Users />;
+      break;
+    case 'books':
+      page = <Books />;
+      break;
+    default:
+      page = <Home />;
+  }
+
 
 
   return (
     <>
+    
+      {page}
   
     </>
   )
