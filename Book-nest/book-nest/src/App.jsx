@@ -1,5 +1,8 @@
 
-import './App.css'
+import './css/App.css'
+import Home from './pages/Home'
+import Users from './pages/Users'
+import Books from './pages/Books'
 
 
 const userData = 
