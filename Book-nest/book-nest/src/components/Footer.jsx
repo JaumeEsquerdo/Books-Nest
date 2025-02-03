@@ -3,7 +3,7 @@ const Footer = () => {
         <>
             <footer className="Footer">
                 <p>© 2025 BookNest. Todos los derechos reservados.</p>
-                <nav>
+                <nav className="Nav">
                     <ul>
                         <li><a href="/">Explora</a></li>
                         <li><a href="/">Mis libros</a></li>

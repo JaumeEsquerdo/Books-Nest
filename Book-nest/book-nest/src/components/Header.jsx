@@ -1,8 +1,8 @@
 const Header = () => {
     return ( 
-        <header>
+        <header className="Header">
             <a href="/home"><img src="/" alt="Logo Book Nest" />LOGO</a>
-            <nav>
+            <nav className="Nav">
                 <ul>
                     <li><a href="/books">Explora</a></li>
                     <li><a href="/MyBooks">Mis libros</a></li>

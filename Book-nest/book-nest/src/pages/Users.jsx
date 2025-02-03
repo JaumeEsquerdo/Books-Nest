@@ -1,6 +1,6 @@
 const Users = () => {
     return (
-        <main>
+        <main className="Main">
             <h2>Registrarse en Book Nest</h2>
             <form action="">
                 <label >

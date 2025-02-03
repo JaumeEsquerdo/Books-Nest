@@ -140,3 +140,33 @@ body.no-scroll {
 li{
   list-style: none;
 }
+
+.Header, .Footer{
+  background-color: var(--bg-color);
+  height: 10vh;
+  padding: 16px;
+  width: 100%;
+}
+
+.Main, .Home{
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.Nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px;
+  width: 100%;
+}
+
+.Nav ul{
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
