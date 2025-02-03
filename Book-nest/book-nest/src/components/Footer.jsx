@@ -11,11 +11,11 @@ const Footer = () => {
                     </ul>
                 </nav>
                 <div>
-                    <a href="">Terminos y condiciones</a>
-                    <a href="">Política de privacidad</a>
+                    <a href="#">Terminos y condiciones</a>
+                    <a href="#">Política de privacidad</a>
                 </div>
             </footer>       
-             </>
+            </>
     );
 }
 

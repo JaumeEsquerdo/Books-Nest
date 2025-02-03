@@ -1,7 +1,7 @@
 const Header = () => {
     return ( 
         <header className="Header">
-            <a href="/home"><img src="/" alt="Logo Book Nest" />LOGO</a>
+            <a href="/home"><img src="" alt="Logo Book Nest" />LOGO</a>
             <nav className="Nav">
                 <ul>
                     <li><a href="/books">Explora</a></li>
