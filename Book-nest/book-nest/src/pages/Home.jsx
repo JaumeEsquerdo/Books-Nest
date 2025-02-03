@@ -1,11 +1,7 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const Home = () => {
     return (
         <>
-        
-        <Header/>
         <main className="Home">
             <h1 className="Home-title">Encuentra tu próximo libro favorito</h1>
 
@@ -16,7 +12,6 @@ const Home = () => {
 
             </div>
         </main>
-        <Footer/>
         </>
     );
 }

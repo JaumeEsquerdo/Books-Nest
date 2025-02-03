@@ -4,9 +4,9 @@ const Header = () => {
             <a href=""><img src="/" alt="Logo Book Nest" />LOGO</a>
             <nav>
                 <ul>
-                    <li><a href="">Explora</a></li>
-                    <li><a href="">Mis libros</a></li>
-                    <li><a href="">Contacto</a></li>
+                    <li><a href="/books">Explora</a></li>
+                    <li><a href="/MyBooks">Mis libros</a></li>
+                    <li><a href="/users">Registro</a></li>
                 </ul>
             </nav>
         </header>

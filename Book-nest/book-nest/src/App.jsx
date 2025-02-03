@@ -3,16 +3,22 @@ import './css/App.css'
 import Home from './pages/Home'
 import Users from './pages/Users'
 import Books from './pages/Books'
+import Header from '../src/components/Header';
+import Footer from '../src/components/Footer';
+import MyBooks from './pages/MyBooks';
 
 
-const userData = 
-  {id:1, name:"", }
-;
-const allUsersData = [];
 
-const booksData = [];
 
-const rentalData = [];
+
+// const userData = 
+//   {id:1, name:"", }
+// ;
+// const allUsersData = [];
+
+// const booksData = [];
+
+// const rentalData = [];
 
 
 
@@ -33,6 +39,9 @@ function App() {
     case 'books':
       page = <Books />;
       break;
+      case 'MyBooks':
+        page = <MyBooks/>;
+        break;
     default:
       page = <Home />;
   }
@@ -41,8 +50,10 @@ function App() {
 
   return (
     <>
-    
+      <Header />
       {page}
+      <Footer/>
+
   
     </>
   )

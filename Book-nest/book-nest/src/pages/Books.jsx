@@ -1,6 +1,10 @@
+import BookGrid from "../components/BookGrid";
+
 const Books = () => {
     return ( 
-        <div></div>
+        <div>
+            <BookGrid />
+        </div>
      );
 }
  
