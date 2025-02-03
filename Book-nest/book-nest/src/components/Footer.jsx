@@ -5,9 +5,9 @@ const Footer = () => {
                 <p>© 2025 BookNest. Todos los derechos reservados.</p>
                 <nav className="Nav">
                     <ul>
-                        <li><a href="/">Explora</a></li>
-                        <li><a href="/">Mis libros</a></li>
-                        <li><a href="/">Contacto</a></li>
+                    <li><a href="/books">Explora</a></li>
+                    <li><a href="/MyBooks">Mis libros</a></li>
+                    <li><a href="/users">Registro</a></li>
                     </ul>
                 </nav>
                 <div>

@@ -22,7 +22,7 @@ const BookGrid = () => {
     const handleSearch = (event) => {
         searchQuery = event.target.value.toLowerCase().trim(); // Guarda el valor del input en searchQuery
     };
-    
+
     const handleSearchSubmit = (event) => { // Función para buscar libros
         event.preventDefault(); // Evita que la página se recargue al hacer submit
         filteredBooks = booksData.filter((book) => { // Filtra los libros que contienen la búsqueda del usuario
@@ -88,10 +88,10 @@ const BookGrid = () => {
                 </form>
 
                 <div className="BookGrid-grid">
-                    {searchQuery && filteredBooks.length === 0 ? (
-                        <p>No se han encontrado libros</p>
-                    ) : (
-                        filteredBooks.map((book) => (
+                    {searchQuery && filteredBooks.length === 0 ? 
+                    (<p>No se han encontrado libros</p>) 
+                    : 
+                    (filteredBooks.map((book) => (
                             <BookCard key={book.id} book={book} handleAddBook={handleAddBook} />
                         ))
                     )}
