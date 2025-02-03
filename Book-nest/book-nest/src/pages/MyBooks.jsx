@@ -5,11 +5,11 @@ const MiPage = () => {
         <div>
             <h1>Mis libros</h1>
             <p>Esta es mi página</p>
-            <ul>
+            {/* <ul>
                 {myBooks.map((book) => (
                     <li key={book.id}>{book.title}</li>
                 ))}
-            </ul>
+            </ul> */}
         </div>
 
      );
