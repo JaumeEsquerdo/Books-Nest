@@ -96,10 +96,8 @@ button:hover {
 
 .Lightbox {
   display: none;
-}
-
-.Lightbox.open{
-  display: block;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -108,9 +106,13 @@ button:hover {
   background-color: rgba(254, 244, 244, 0.8);
   z-index: 10;
 }
+
+.Lightbox.open{
+  display: flex;
+}
 .Lightbox-img{
   max-width: 100%;
-  max-height: 900px;
+  max-height: 80vh;
   object-fit: contain;
 }
 
