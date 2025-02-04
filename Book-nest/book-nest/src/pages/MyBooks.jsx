@@ -2,7 +2,7 @@
 
 const MiPage = () => {
     return ( 
-        <div>
+        <div className="Main">
             <h1>Mis libros</h1>
             <p>Esta es mi página</p>
             {/* <ul>
@@ -14,5 +14,5 @@ const MiPage = () => {
 
      );
 }
- 
+
 export default MiPage;

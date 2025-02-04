@@ -34,9 +34,19 @@ const BookGrid = () => {
     const handleAddBook = (book) => {
         // si some devuelve true(el libro esta en la lista, el if pasa a ser false por el !; y al reves, si el libro no esta en la lista(pasa de false a true para que se ejecute))
         if (!myBooks.some(b => b.id === book.id)) {
-            setMyBooks([...myBooks, book]);
+            setMyBooks([...myBooks, { ...book, completed: false }]);
         }
     };
+
+    const handleRemoveBook = (id) => {
+        setMyBooks(myBooks.filter(book => book.id !== id)) // filtro por la lista de myBooks que no tenga el book del id que le paso para eliminarla
+    }
+
+    const toggleCompleted = (id) => {
+        setMyBooks(myBooks.map(book =>
+            book.id === id ? { ...book, completed: !book.complted } : book
+        ))
+    }
 
     const handleSearchSubmit = (event) => {
         event.preventDefault(); //ppara que la pagina no se recargue
@@ -48,7 +58,7 @@ const BookGrid = () => {
             <div className="BookGrid">
                 <h2 className="BookGrid-title">Libros por explorar</h2>
 
-                <form onSubmit={handleSearchSubmit}>
+                <form className='BookGrid-search' onSubmit={handleSearchSubmit}>
                     {/* input de búsqueda */}
                     <input type="text" placeholder="Busca un libro..." onChange={handleSearch} />
                     {/* onInput actualiza el valor de la búsqueda con cada entrada */}
@@ -70,7 +80,15 @@ const BookGrid = () => {
                 <h3>Mis libros</h3>
                 <ul>
                     {myBooks.map((book) => (
-                        <li key={book.id}>{book.title}</li>
+                        <li key={book.id}>
+                            <input type="checkbox"
+                            checked={book.completed}
+                            onChange={()=> toggleCompleted(book.id)}
+                            />
+                            
+                            {book.title} {book.completed ? "(Completado)" : "(Pendiente)"}
+                        <button onClick={()=> handleRemoveBook(book.id)}>Eliminar</button>
+                        </li>
                     ))}
                 </ul>
             </div>
