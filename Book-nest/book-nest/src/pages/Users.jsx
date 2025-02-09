@@ -5,15 +5,15 @@ const Users = () => {
             <form action="">
                 <label >
 
-                    <input type="text" name="name" id="name" placeholder="Nombre" required />
+                    <input className='BookGrid-input' type="text" name="name" id="name" placeholder="Nombre" required />
                 </label>
                 <label >
 
-                    <input type="email" name="email" id="email" placeholder="Correo electrónico" required />
+                    <input className='BookGrid-input' type="email" name="email" id="email" placeholder="Correo electrónico" required />
                 </label>
                 <label >
 
-                    <input type="password" name="password" id="pasword" placeholder="Contraseña" required />
+                    <input className='BookGrid-input' type="password" name="password" id="pasword" placeholder="Contraseña" required />
                 </label>
 
                 <button type="submit">Registrarse</button>

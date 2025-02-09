@@ -1,3 +1,5 @@
+import DarkMode from "./DarkMode";
+
 const Header = () => {
     return ( 
         <header className="Header">
@@ -9,6 +11,7 @@ const Header = () => {
                     <li><a href="/users">Registro</a></li>
                 </ul>
             </nav>
+            <DarkMode />
         </header>
     );
 }

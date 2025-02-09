@@ -17,15 +17,20 @@
   --bg-color: #F5F5F5;
   --secondary-color: #F2EAD3;
   --tertiary-color: #DFD7BF;
+  /* MODO OSCURO */
+  --textDark-color: #EADDC8;  /* Crema suave, mantiene el tono cálido */
+--bgDark-color: #705541;    /* Marrón oscuro, aporta profundidad */
+--secondaryDark-color: #4A3628; /* Marrón chocolate, da contraste */
+--tertiaryDark-color: #6B4F35;  /* Marrón medio, equilibra */
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--text-color);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  transform: translateY(-3px);
 }
 
 body {
@@ -36,10 +41,20 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+.dark body{
+  background-color: var(--bgDark-color);
+}
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: var(--text-color);
+}
+h2{
+  color: var(--text-color);
+}
+.dark h1, .dark h2, .dark a{
+  color: var(--textDark-color);
 }
 
 button {
@@ -53,6 +68,11 @@ button {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
+.dark button{
+  background-color: var(--bgDark-color);
+
+}
 button:hover {
   background-color: var(--tertiay-color);
   transform: translateY(-3px); /* Se mueve hacia arriba */
@@ -60,7 +80,7 @@ button:hover {
   color: var(--text-color); }
 
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -69,9 +89,10 @@ button:hover {
     color: #747bff;
   }
   button {
-    /* background-color: #f9f9f9; */
+    /* background-color: #f9f9f9; 
   }
-}
+} */
+
 
 
 .BookCard-img{
@@ -109,8 +130,8 @@ button:hover {
   }
 }
 .BookCard:hover{
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px)
+  box-shadow: 0 8px 66px rgba(0, 0, 0, 0.3);
+  
 }
 
 .Lightbox {
@@ -154,8 +175,8 @@ body.no-scroll {
 
 .BookGrid-grid{
   display: grid;
-  grid-template-columns: repeat(3 , 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(4 , 1fr);
+  gap: 36px;
   padding: 16px;
 }
 
@@ -164,10 +185,16 @@ li{
 }
 
 .Header, .Footer{
+  display: flex;
+  justify-content: space-around ;
   background-color: var(--bg-color);
   height: 10vh;
   padding: 16px;
   width: 100%;
+}
+.dark .Header, .dark .Footer{
+  background-color: var(--bgDark-color);
+
 }
 
 .Main, .Home{
@@ -201,13 +228,14 @@ li{
   gap: 10px;
   width: 200px;
 }
-.BookGrid-inputSearch{
+.BookGrid-input{
   padding: 12px 30px 12px 12px;
   border: 2px solid var(--tertiary-color);
   border-radius: 5px;
+  margin: 0 20px;
   
 }
-.BookGrid-inputSearch:focus{
+.BookGrid-input:focus{
   border-color: var(--text-color);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
