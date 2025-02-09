@@ -193,13 +193,23 @@ li{
   width: 50%;
 }
 
-.BookGrid-search{
+.BookGrid-form{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
   width: 200px;
+}
+.BookGrid-inputSearch{
+  padding: 12px 30px 12px 12px;
+  border: 2px solid var(--tertiary-color);
+  border-radius: 5px;
+  
+}
+.BookGrid-inputSearch:focus{
+  border-color: var(--text-color);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .BookGrid{

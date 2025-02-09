@@ -58,11 +58,11 @@ const BookGrid = () => {
             <div className="BookGrid">
                 <h2 className="BookGrid-title">Libros por explorar</h2>
 
-                <form className='BookGrid-search' onSubmit={handleSearchSubmit}>
+                <form className='BookGrid-form' onSubmit={handleSearchSubmit}>
                     {/* input de búsqueda */}
-                    <input type="text" placeholder="Busca un libro..." onChange={handleSearch} />
+                    <input className='BookGrid-inputSearch' type="text" placeholder="Busca un libro..." onChange={handleSearch} />
                     {/* onInput actualiza el valor de la búsqueda con cada entrada */}
-                    <button type="submit">Buscar</button>
+                    <button className='Bookgrid-btn' type="submit">Buscar</button>
                 </form>
 
                 <div className="BookGrid-grid">
