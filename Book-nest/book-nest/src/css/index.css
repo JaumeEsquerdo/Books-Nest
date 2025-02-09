@@ -75,8 +75,8 @@ button:hover {
 
 
 .BookCard-img{
-  width: 100px;
-  height: 150px;
+  width: 130px;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -93,6 +93,20 @@ button:hover {
   width: 200px;
   cursor: pointer;
   transition: box-shadow 1s ease-in-out, transform 0.5s ease-in-out ;
+
+  /* animación fadeInUp */
+
+  opacity: 0;
+  transform: translateY(40px); /* esto hace que se mueva de abajo a arriba (en el keyframes fadeInUp final se queda en posición 0 */
+  animation: fadeInUp 1s ease-in-out forwards; /* el forwards significa que cuando hace la animación se mantiene esta, es decir, no vuelve a su posicion inicial*/
+
+
+}
+@keyframes fadeInUp{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .BookCard:hover{
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
