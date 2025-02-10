@@ -7,9 +7,6 @@ const BookGrid = () => {
     const [myBooks, setMyBooks] = useState([]);
     const [booksData, setBooksData] = useState([]);
 
-
-
-
     // const booksData = [
     //     { id: 1, title: "El principito", image: "https://m.media-amazon.com/images/I/51o0Vtg6oHL._AC_UF1000,1000_QL80_.jpg" },
     //     { id: 2, title: "Cien años de soledad", image: "https://m.media-amazon.com/images/I/81rEWmLXliL.jpg" },
