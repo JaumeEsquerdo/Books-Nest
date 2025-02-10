@@ -37,9 +37,11 @@ const BookCard = ({ book, handleAddBook }) => {
             {/* mejor rodearlo todo con el condicional para que apareza o desaparezca todo */}
             {isOpen && (
                 <div className="Lightbox open">
-                    <span onClick={closeLightbox}>XXXXXXXXXXXXXXXXXXXXXXXXXX</span>
+                    <div className='Lightbox-content'>
+                    <span className='BtnClose' onClick={closeLightbox}>X</span>
                     <img src={book.image} alt={book.title} className="Lightbox-img" />
                     <p>{book.title}</p>
+                    </div>
                 </div>
             )}
             {/* utilizar () para agrupar bloque múltiples de líneas */}
